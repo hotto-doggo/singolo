@@ -1,0 +1,267 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box
+}
+
+.container {
+    max-width: 1020px;
+    width: 100%
+}
+
+.get-a-quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f06c64;
+    font-family: "Lato", sans-serif;
+    border-bottom: 6px solid #ea676b
+}
+
+.get-a-quote .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 69px 40px 22px 40px
+}
+
+.get-a-quote__heading {
+    width: 100%;
+    font-weight: 900;
+    font-size: 29.6188px;
+    line-height: 18px;
+    color: #f0d8d9;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px
+}
+
+.get-a-quote__text {
+    width: 100%;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #f0d8d9;
+    margin-bottom: 43px;
+    letter-spacing: -0.2px;
+    text-align: justify
+}
+
+.get-a-quote__form {
+    width: 67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-right: 11px
+}
+
+.get-a-quote__contacts {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10px
+}
+
+.form__input {
+    width: 100%;
+    line-height: 1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    background: #d6564f;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px 9px;
+    margin-bottom: 16px;
+    letter-spacing: -0.3px
+}
+
+.form__input::-webkit-input-placeholder {
+    color: #f48c8f
+}
+
+.form__input::-moz-placeholder {
+    color: #f48c8f
+}
+
+.form__input:-ms-input-placeholder {
+    color: #f48c8f
+}
+
+.form__input::-ms-input-placeholder {
+    color: #f48c8f
+}
+
+.form__input::placeholder {
+    color: #f48c8f
+}
+
+.form__message {
+    height: 200px;
+    resize: none;
+    margin-bottom: 5px;
+    letter-spacing: -1.7px
+}
+
+.form__button {
+    line-height: 20px;
+    padding: 8px 15px 9px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #f48c8f;
+    background: #d6564f;
+    border: 2px solid #ca4549;
+    border-radius: 5px;
+    transition: all 0.5s;
+    cursor: pointer
+}
+
+.form__button:hover {
+    color: #d6564f;
+    background: #f48c8f
+}
+
+.contacts__heading {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 17.7713px;
+    line-height: 18px;
+    color: #f0d8d9;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px
+}
+
+.contacts__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    margin-bottom: 23px;
+    letter-spacing: -0.2px;
+    text-align: justify
+}
+
+.contacts__position {
+    display: flex;
+    flex-direction: row;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9
+}
+
+.contacts__position-img-wrapper {
+    width: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px
+}
+
+.contacts__position-img {
+    height: 11px
+}
+
+.contacts__position-img--mail {
+    height: auto;
+    width: 12px
+}
+
+.contacts__position-link {
+    color: #f0d8d9;
+    text-decoration: none
+}
+
+.contacts__position-link:hover {
+    text-decoration: underline
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2D303A;
+    font-family: "Lato", sans-serif
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 40px 22px 42px
+}
+
+.footer__copyright {
+    font-size: 10px;
+    color: #666d89;
+    font-weight: 300;
+    letter-spacing: .8px
+}
+
+.footer__footer-socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.footer-socialmedia__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+    margin-left: 8px
+}
+
+.footer-socialmedia__link:hover {
+    border-color: #ca4549
+}
+
+.footer-socialmedia-link__img {
+    height: 14px;
+    width: 14px
+}
+
+@font-face {
+    font-family: "Lato";
+    src: src("../assets/fonts/Lato-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Lato";
+    src: src("../assets/fonts/Lato-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700
+}
+
+@font-face {
+    font-family: "Lato";
+    src: src("../assets/fonts/Lato-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900
+}
+
+@font-face {
+    font-family: "Lato";
+    src: src("../assets/fonts/Lato-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300
+}
