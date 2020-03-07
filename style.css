@@ -221,6 +221,8 @@
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
+    height: 64.8px;
+    overflow: hidden;
     text-align: justify
 }
 
@@ -274,6 +276,11 @@
 .portfolio__portfolio-card {
     margin-bottom: 17px
 }
+
+.portfolio__portfolio-card:nth-child(n + 13) {
+    display: none;
+}
+
 
 .navigation__nav {
     display: flex;
@@ -367,6 +374,10 @@
     margin-bottom: 14px
 }
 
+.about-card__content{
+    width: 100%;
+}
+
 .about-card__heading {
     font-style: normal;
     font-weight: 900;
@@ -375,9 +386,15 @@
     color: #666d89;
     letter-spacing: -2.5px;
     margin-bottom: 10px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    padding: 5px; 
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .about-card__text {
+    width: 100%;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
