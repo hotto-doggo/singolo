@@ -12,36 +12,66 @@
 
 <body>
 
+
+  <div class="modal-window">
+    <div class="container">
+      <p class="modal-window__message-sent modal-window__text">The letter was sent</p>
+      <p class="modal-window__subject modal-window__text"></p>
+      <p class="modal-window__message modal-window__text"></p>
+      <button class="modal-window__close">OK</button>
+    </div>
+  </div>
+
+
   <header class="header">
     <div class="container">
       <h1 class="header__logo">SINGOLO<span class="header__logo-span">*</span></h1>
       <nav class="header__nav">
         <ul class="nav">
-          <li class="nav__item nav__item--first"><a href="#" class="nav__link">HOME</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">SERVICES</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">PORTFOLIO</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">ABOUT</a></li>
-          <li class="nav__item nav__item--last"><a href="#" class="nav__link">CONTACT</a></li>
+          <li class="nav__item nav__item--first"><a href="#home" class="nav__link active">HOME</a></li>
+          <li class="nav__item"><a href="#services" class="nav__link">SERVICES</a></li>
+          <li class="nav__item"><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
+          <li class="nav__item nav__item--last"><a href="#contact" class="nav__link">CONTACT</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="slider">
+  <div class="slider slide--1 section" id="home">
     <div class="container">
-      <button class="slider__arrow">
+      <button class="slider__arrow slider__arrow--left">
         <img src="assets/img/arrow-left.png" alt="arrow-left" class="arrow arrow--left">
       </button>
-      <img src="assets/img/iPhone_Vertical.png" alt="iPhone Vertical" class="slider__content slider__content--vertical">
-      <img src="assets/img/iPhone_Horizontal.png" alt="iPhone Horizontal"
-        class="slider__content slider__content--horizontal">
-      <button class="slider__arrow">
+      <button class="slider__arrow slider__arrow--right">
         <img src="assets/img/arrow-right.png" alt="arrow-right" class="arrow arrow--right">
       </button>
+      <div class="slider__slider">
+        <div class="slider__inner-wrapper">
+          <div class="slide slide--1">
+            <div class="slider__content-wrapper slider__content-wrapper--vertical" id="phone-1">
+              <img src="assets/img/iPhone_Vertical.png" alt="iPhone Vertical"
+                class="slider__content slider__content--vertical">
+            </div>
+            <div class="slider__content-wrapper slider__content-wrapper--horizontal" id="phone-2">
+              <img src="assets/img/iPhone_Horizontal.png" alt="iPhone Horizontal"
+                class="slider__content slider__content--horizontal">
+            </div>
+          </div>
+          <div class="slide slide--2">
+            <div class="slider__content-wrapper slider__content-wrapper--three-phones" id="phone-3">
+              <img src="assets/img/iPhone_Three-Phones.png.png" alt="iPhone Horizontal"
+                class="slider__content slider__content--three-phones">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <section class="services">
+  <section class="services section" id="services">
     <div class="container">
       <h2 class="services__heading">Our Services</h2>
       <p class="services__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -102,17 +132,17 @@
   </section>
 
 
-  <section class="portfolio">
+  <section class="portfolio section" id="portfolio">
     <div class="container">
       <h2 class="portfolio__heading">Portfolio</h2>
       <p class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem
         nec elit.</p>
       <nav class="portfolio__navigation">
         <ul class="navigation__nav">
-          <li class="nav__item"><a href="#" class="nav__link">All</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Web Design</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Graphic Design</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Artwork</a></li>
+          <li class="nav__item active" id="all"><a class="nav__link">All</a></li>
+          <li class="nav__item" id="web-design"><a class="nav__link">Web Design</a></li>
+          <li class="nav__item" id="graphi-design"><a class="nav__link">Graphic Design</a></li>
+          <li class="nav__item" id="artwork"><a class="nav__link">Artwork</a></li>
         </ul>
       </nav>
       <div class="portfolio__cards">
@@ -149,7 +179,7 @@
     </div>
   </section>
 
-  <section class="about">
+  <section class="about section" id="about">
     <div class="container">
       <h2 class="about__heading">About Us</h2>
       <p class="about__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -232,7 +262,7 @@
     </div>
   </section>
 
-  <section class="get-a-quote">
+  <section class="get-a-quote section" id="contact">
     <div class="container">
       <h2 class="get-a-quote__heading">Get a Quote</h2>
       <p class="get-a-quote__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non
@@ -301,6 +331,8 @@
 
 
 
+
+  <script src="script.js"></script>
 
 </body>
 
