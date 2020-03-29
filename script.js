@@ -1,12 +1,19 @@
 // Header - переключение по клику и по скроллу
 const links = document.querySelectorAll(".header .nav__link");
+const links2 = document.querySelectorAll(".burgermenue .nav__link");
 
 links.forEach(link => {
+    link.addEventListener("click", toggleActive);
+})
+links2.forEach(link => {
     link.addEventListener("click", toggleActive);
 })
 
 function toggleActive() {
     links.forEach(link => {
+        link.classList.remove("active");
+    })
+    links2.forEach(link => {
         link.classList.remove("active");
     })
     this.classList.add("active");
@@ -19,26 +26,34 @@ const allSections = document.querySelectorAll(".section");
 function changeActiveLinkOnScroll() {
     allSections.forEach(section => {
         const thisTopCoordinates = section.getBoundingClientRect().top;
-        
 
         if (thisTopCoordinates > 0 && thisTopCoordinates <= 200) {
 
-            console.dir(section.id)
-
             const linkToChange = document.querySelector(".header .nav__link[href='#" + section.id + "']")
 
-            links.forEach(link => {
-                link.classList.remove("active");
-            })
-            linkToChange.classList.add("active");
-        }
-        else if(pageYOffset <=200){
-            const linkToChange = document.querySelector(".header .nav__link[href='#home']")
+            const linkToChange2 = document.querySelector(".burgermenue .nav__link[href='#" + section.id + "']")
 
             links.forEach(link => {
                 link.classList.remove("active");
             })
+            links2.forEach(link => {
+                link.classList.remove("active");
+            })
             linkToChange.classList.add("active");
+            linkToChange2.classList.add("active");
+        }
+        else if (pageYOffset <= 200) {
+            const linkToChange = document.querySelector(".header .nav__link[href='#home']")
+            const linkToChange2 = document.querySelector(".burgermenue .nav__link[href='#home']")
+
+            links.forEach(link => {
+                link.classList.remove("active");
+            })
+            links2.forEach(link => {
+                link.classList.remove("active");
+            })
+            linkToChange.classList.add("active");
+            linkToChange2.classList.add("active");
         }
     });
 }
@@ -113,6 +128,26 @@ function moveToTheRight() {
     //     sliderInnerWrapper.style.transform = "translateX(" + (sliderCounter * (-312)) + "px)";
     // }
 }
+
+window.addEventListener('resize', changeSlideWidth);
+
+function changeSlideWidth() {
+    const containerWidth = document.querySelector('.slider .container').clientWidth;
+    sliderItems.forEach(slide => {
+        slide.style.minWidth = containerWidth + 'px';
+    })
+}
+
+changeSlideWidth();
+
+
+
+
+
+
+
+
+
 
 //Slider. Активация экранов телефонов
 const phones = document.querySelectorAll(".slider__content-wrapper");
@@ -207,8 +242,6 @@ function openMessage(event) {
     const subject = document.querySelector("#form__subject");
     const message = document.querySelector("#form__message");
 
-    console.dir([name, email, subject, message])
-
     if (name.value === "" || email.value === "" || !email.value.split("").includes("@")) {
         event.defaultPrevented();
     }
@@ -242,4 +275,20 @@ function clearValues(arr) {
 
 function closeMessage() {
     modalWindow.classList.remove("active");
+}
+
+
+
+//burgermenue open and close
+
+const burgerButtonOpen = document.getElementById('header__burger-open-button');
+const burgerButtonClose = document.getElementById('burgermenue__burger-close-button');
+const burgerMenue = document.getElementById('burgermenue');
+
+document.addEventListener('click', openCloseBurger);
+
+function openCloseBurger(event) {
+    if (event.target.closest(".header__burger-open-button") || event.target.closest(".burgermenue__burger-close-button") || event.target == burgerMenue || (event.target.classList.contains('nav__link')&& event.target.classList.contains('burgermenue'))) {
+        burgerMenue.classList.toggle('active');
+    }
 }
